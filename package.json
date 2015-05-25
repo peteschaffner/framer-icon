@@ -1,6 +1,6 @@
 {
   "name": "framer-icon",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Dynamically tinted icons based off of a template image.",
   "keywords": [
     "prototyping",
