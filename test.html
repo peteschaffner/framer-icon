@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <script type="text/javascript">
+    // This automatically sets the right viewport scale on mobile devices
+    (function() {
+    var scale = 1 / window.devicePixelRatio
+    document.write("<meta name=\"viewport\" content=\"width=device-width, height=device-height, initial-scale=" + scale + ", maximum-scale=" + scale + ", user-scalable=no\">")
+    })()
+    </script>
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="icon/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="icon/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="icon/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="icon/apple-touch-icon-precomposed.png">
+
+    <style type="text/css" media="screen">
+
+    * {
+      margin:0;
+      padding:0;
+      border:none;
+      -webkit-user-select:none;
+      -webkit-tap-highlight-color: rgba(0,0,0,0)
+    }
+
+    body {
+      background: white;
+      font: 28px/1em "Helvetica";
+      color: #FFF;
+    }
+
+    a {
+      color: #bfbfbf;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    </style>
+
+  </head>
+  <body>
+    <script src="http://builds.framerjs.com/latest/framer.js"></script>
+    <script src=".bundle.js"></script>
+
+    <script>
+      var Icon = require('.')
+
+      var icon = new Icon({
+        width: 30,
+        height: 30,
+        image: 'https://d30y9cdsu7xlg0.cloudfront.net/svg/40712e51-af54-4779-8b8c-6832c8ffdcbb.svg?Expires=1432540881&Signature=IKW14Kk0Q1jzM7RXCcHgTN2z9yU7ckCxi9yUT72EMrGchm1-igFtyXIHRgjTQPwwml0BmJQ9qKXiflfVw3m0AJ~3RoC6z8qP~of-9EmRn2H7Q32fIrMslwgygR5jqMYy~LUdf2JcSC-Kr2vS9obDwWv4IzTJWH-lk9k0xxNqBks_&Key-Pair-Id=APKAI5ZVHAXN65CHVU2Q',
+        tintColor: 'cornflowerblue'
+      })
+
+      icon.center()
+      icon.addSubLayer(new BackgroundLayer({ backgroundColor: 'lightcoral' }))
+      icon.subLayers[0].states.add({
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 }
+      })
+      icon.on(Events.Click, function() {
+        this.subLayers[0].states.next()
+      })
+    </script>
+  </body>
+</html>

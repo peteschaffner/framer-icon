@@ -1,0 +1,17 @@
+{
+  "name": "framer-icon",
+  "version": "0.1.0",
+  "description": "Dynamically tinted icons based off of a template image.",
+  "keywords": [
+    "prototyping",
+    "framerjs"
+  ],
+  "main": "index.js",
+  "devDependencies": {
+    "framer-cli": "^0.1.0"
+  },
+  "scripts": {
+    "start": "framer preview"
+  },
+  "framer": { "type": "module" }
+}
